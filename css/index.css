@@ -123,6 +123,8 @@ body {
     .slide-controls .indicators {
         width: 100%;
         margin: 0 auto;
+    }.slide-controls .indicators ul {
+        margin-bottom: 15px;
     }
     .slide-controls .indicators ul li {
         height: 20px;
@@ -131,3 +133,4 @@ body {
         line-height: 20px;
     }
 }
+
