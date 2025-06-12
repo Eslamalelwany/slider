@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #222222;
+    margin: 200px auto;
+
+}
+
+.slider-container {
+    margin: 10px auto;
+    width: 798px;
+    height: 372px;
+    position: relative;
+}
+
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    position: absolute;
+}
+.slider-container img.active{
+    opacity: 1;
+}
+
+.slider-container #slide-number {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+.slide-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.slide-controls .prev,
+.slide-controls .next {
+    background-color: #e65100;
+    color: #fff;
+    font-size: 16px;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+    user-select: none;
+    width: 20%;
+    padding: 5px;
+    cursor: pointer;
+}  
+
+.slide-controls .prev{
+    float: left;
+}
+
+.slide-controls .next {
+    float: right;
+}
+
+.slide-controls .prev.disapled,
+.slide-controls .next.disapled {
+    background-color:#e651004a ;
+    cursor: no-drop;
+}
+
+.slide-controls .indicators {
+    width: 60%;
+    float: left;
+}
+
+.slide-controls .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.slide-controls .indicators ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.slide-controls .indicators ul li.active {
+    background-color: #e65100;
+    color: #fff;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    .slider-container {
+        height: 45vw;
+        min-height: 100px;
+    }
+    .slide-controls {
+        flex-direction: column;
+        width: 98%;
+    }
+    .slide-controls .prev,
+    .slide-controls .next {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+    }
+    .slide-controls .indicators {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .slide-controls .indicators ul li {
+        height: 20px;
+        width: 20px;
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+}
