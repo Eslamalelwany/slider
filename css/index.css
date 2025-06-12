@@ -33,14 +33,15 @@ body {
 
 .slider-container #slide-number {
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 0px;
+    top: -34px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 5px 10px;
     font-size: 20px;
     z-index: 2;
     border-radius: 6px;
+}
 }
 .slide-controls {
     width: 800px;
